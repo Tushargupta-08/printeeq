@@ -11,7 +11,7 @@ import Login from './component/Login';
 import SignUp from './component/SignUp';
 function App() {
   return (
-    <div className='flex justify-center sm:ml-20 '>
+    <div className='flex justify-center max-w-full '>
     
     <Router>
       <div className="w-full min-h-screen flex flex-col ">
