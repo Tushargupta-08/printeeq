@@ -11,8 +11,10 @@ import Login from './component/Login';
 import SignUp from './component/SignUp';
 function App() {
   return (
+    <div className='flex justify-center sm:ml-20 '>
+    
     <Router>
-      <div className="container my-3">
+      <div className="w-full min-h-screen flex flex-col ">
       <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -34,6 +36,8 @@ function App() {
       <Footer />
       </div>
     </Router>
+
+</div>
   );
 }
 
