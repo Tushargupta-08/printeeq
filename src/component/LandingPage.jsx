@@ -1,6 +1,9 @@
 import React from "react";
-
+import { Link, useNavigate } from "react-router-dom";
 const LandingPage = () => {
+    const navigate = useNavigate();
+  
+    const handleRedirect4 = () => navigate("/Shop");
   return (
     <>
 
@@ -13,8 +16,9 @@ const LandingPage = () => {
             Wear your art — bold, custom-printed dresses designed to express your unique style.
           </h2>
           <button
+          onClick={handleRedirect4}
             type="button"
-            className="bg-black text-white px-6 py-3 mt-6 hover:bg-zinc-800 transition w-full sm:w-auto rounded"
+            className="cursor-pointer bg-black text-white px-6 py-3 mt-6 hover:bg-zinc-800 transition w-full sm:w-auto rounded "
           >
             Shop Now
           </button>
