@@ -1,11 +1,21 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect,useState } from "react"
 import { Menu, Search, X } from "lucide-react"
+import{Link} from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import { useNavigate } from "react-router-dom";
 export default function Navbar() {
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
+const navigate = useNavigate();
+  const handleRedirect = () => {
+    navigate('/Cart');
+  };
+  const handleRedirect2 = () => {
+    navigate('/Login');
+  };
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
@@ -26,30 +36,19 @@ export default function Navbar() {
   
 </div>
 
-            <a
-              href="#"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-            >
-              Home
-            </a>
-            <a
-              href="#"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-            >
-           Shop
-            </a>
-            <a
-              href="#"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-              >
-              Men
-            </a>
-            <a
-              href="#"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-            >
-      Women
-            </a>
+        <Link to="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+  Home
+</Link>
+<Link to="/Shop" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+  Shop
+</Link>
+<Link to="/MenSection" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+  Men
+</Link>
+<Link to="/WomenSection" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+  Women
+</Link>
+
            
            <div className="relative w-96 mr-3">
   <input
@@ -59,8 +58,14 @@ export default function Navbar() {
   />
   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
 </div>
-<img  className =" h-8 w-10 object-contain ml-2 cursor-pointer"src="https://media.istockphoto.com/id/1251362621/photo/shopping-cart-vector-art-closeup-view.webp?a=1&b=1&s=612x612&w=0&k=20&c=apy4HMAIDlkV9xf9c_2A-jGKZ5js9rSaqxJ7VDYoxfA=" alt="" />
-<img  className="h-8 w-8 object-contain ml-2 cursor-pointer"src="https://deeptiop.github.io/web-app-clothes-printing-MERN-Stack/assets/user-Cz2xbWm6.png"/>
+<img 
+onClick={handleRedirect} 
+className =" h-8 w-10 object-contain ml-2 cursor-pointer"
+src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" 
+alt="" />
+<img onClick={handleRedirect2}
+ className="h-8 w-8 object-contain ml-2 cursor-pointer"
+ src="https://deeptiop.github.io/web-app-clothes-printing-MERN-Stack/assets/user-Cz2xbWm6.png"/>
           </div>
 
           {/* Mobile menu button */}
@@ -79,30 +84,30 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
-              <a
-                href="#"
+              <Link
+              to="/"
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               >
                 Home
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+              to="/Shop"
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               >
-                About
-              </a>
-              <a
-                href="#"
+                Shop
+              </Link>
+              <Link
+              to="/MenSection"
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               >
-                Services
-              </a>
-              <a
-                href="#"
+                Men
+              </Link>
+              <Link
+              to="/WomenSection"
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               >
-                Contact
-              </a>
+              Women
+              </Link>
               <button className="w-full text-left bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 mt-2">
                 Get Started
               </button>
