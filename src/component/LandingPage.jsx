@@ -3,7 +3,7 @@ import React from "react";
 const LandingPage = () => {
   return (
     <>
-      {/* Hero Section */}
+
       <div className="flex flex-col-reverse md:flex-row justify-evenly items-center mt-9 px-4 md:px-10 bg-gradient-to-br from-white via-white to-black">
         <div className="md:mr-20 text-center md:text-left">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">
@@ -36,7 +36,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {/* Categories */}
+    
       <div className="mt-10 bg-gradient-to-l from-white to-black px-4 py-6 rounded-lg">
         <h2 className="text-xl sm:text-2xl font-semibold mb-6 text-center">Shopping by Categories</h2>
         <ul className="flex flex-wrap justify-center gap-8">
@@ -58,7 +58,7 @@ const LandingPage = () => {
         </ul>
       </div>
 
-      {/* Men Section */}
+  
       <section className="bg-gradient-to-r from-gray-500 to-black text-white gap-10 mx-4 sm:mx-10 md:mx-20 rounded-lg py-8 my-10">
         <h2 className="text-xl sm:text-2xl font-semibold px-4">Men Section</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 sm:px-10">
@@ -79,7 +79,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Women Section */}
+    
       <section className="bg-gradient-to-l from-gray-500 to-white gap-10 mx-4 sm:mx-10 md:mx-20 rounded-lg py-8 my-10">
         <h2 className="text-xl sm:text-2xl font-semibold px-4">Women Section</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 sm:px-10">
@@ -100,7 +100,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* How to Order */}
+ 
       <section className="rounded-lg mx-4 sm:mx-10 md:mx-20 bg-gradient-to-l from-gray-300 to-white py-10 px-4 sm:px-10 md:px-20">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center mb-10">
           How to design and order custom T-shirts
@@ -135,7 +135,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+ 
       <section className="px-4 sm:px-10 md:px-20 py-16 bg-white">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3">What People Are Saying</h2>
         <p className="text-center text-gray-500 mb-10">We provide support for more than 15K+ Businesses.</p>

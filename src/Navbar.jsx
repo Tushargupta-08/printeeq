@@ -16,19 +16,18 @@ export default function Navbar() {
     <nav className="bg-white shadow-md w-full z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Brand */}
+      
           <div className="flex items-center">
             <h1 className="text-2xl font-bold text-blue-600">PrinTeeQ</h1>
           </div>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/Shop" className="nav-link">Shop</Link>
             <Link to="/MenSection" className="nav-link">Men</Link>
             <Link to="/WomenSection" className="nav-link">Women</Link>
 
-            {/* Search */}
+         
             <div className="relative w-64">
               <input
                 type="text"
@@ -38,7 +37,7 @@ export default function Navbar() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
             </div>
 
-            {/* Icons */}
+          
             <img
               onClick={handleRedirect}
               className="h-6 w-6 object-contain cursor-pointer"
@@ -53,7 +52,7 @@ export default function Navbar() {
             />
           </div>
 
-          {/* Mobile Menu Button */}
+         
           <div className="md:hidden">
             <button onClick={toggleMenu} className="text-gray-700 p-2">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -61,7 +60,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+      
         {isMenuOpen && (
           <div className="md:hidden mt-2 bg-gray-50 rounded-lg px-4 py-3 space-y-2 shadow-inner">
   <Link to="/" className="block text-gray-700 font-medium hover:text-black">Home</Link>
@@ -69,7 +68,7 @@ export default function Navbar() {
   <Link to="/MenSection" className="block text-gray-700 font-medium hover:text-black">Men</Link>
   <Link to="/WomenSection" className="block text-gray-700 font-medium hover:text-black">Women</Link>
 
-  <div className="flex items-center gap-4 pt-2 border-t border-gray-300 pt-3">
+  <div className="flex items-center gap-4 border-t border-gray-300 pt-3">
     <img
       onClick={handleRedirect}
       className="h-6 w-6 cursor-pointer transition-transform hover:scale-110"
